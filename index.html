@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Girls Next Stop</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=Cormorant+Garamond:ital,wght@0,300;1,300;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- ── NAV ── -->
+  <nav>
+    <div class="nav-logo" onclick="window.location.href='index.html'">
+      Girls Next <span>Stop</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="#cities">Destinations</a></li>
+      <li><button class="nav-quiz-btn" onclick="openQuiz()">✨ Find My City</button></li>
+    </ul>
+  </nav>
+
+  <!-- ── HERO ── -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <p class="hero-eyebrow">Your ultimate girls' trip guide</p>
+    <h1 class="hero-title">Pack your<br>bags, <em>babe.</em></h1>
+    <p class="hero-sub">
+      Curated city guides for the girls who brunch hard,
+      shop harder, and make memories that last forever.
+    </p>
+    <div class="hero-btns">
+      <button class="btn-primary" onclick="openQuiz()">✨ Find My Destination</button>
+      <a href="#cities" class="btn-outline">Browse All Cities</a>
+    </div>
+  </section>
+
+  <!-- ── CITIES GRID ── -->
+  <section class="cities-section" id="cities">
+    <div class="sec-header">
+      <span class="sec-tag">Where to next?</span>
+      <h2 class="sec-title">Pick your <em>destination</em></h2>
+    </div>
+
+    <div class="cities-grid">
+
+      <!-- Miami -->
+      <a class="city-card" href="cities/miami.html">
+        <div class="city-img">
+          <div class="city-img-inner" style="background-image:url('https://images.unsplash.com/photo-1506966953602-c20cc11f75e3?w=800&q=80')"></div>
+          <div class="city-img-overlay"></div>
+          <span class="city-flag">🇺🇸 Florida</span>
+          <div class="city-vibe"><span>Nightlife</span><span>Beach</span></div>
+        </div>
+        <div class="city-body">
+          <div class="city-name">Miami</div>
+          <div class="city-tagline">Sun, sand, rooftops & art deco glam</div>
+          <span class="city-arrow">Explore →</span>
+        </div>
+      </a>
+
+      <!-- Nashville -->
+<a class="city-card" href="cities/nashville.html">
+  <div class="city-img">
+    <div class="city-img-inner" style="background-image:url('images/nashville.jpg')"></div>
+    <div class="city-img-overlay"></div>
+    <span class="city-flag">🇺🇸 Tennessee</span>
+    <div class="city-vibe"><span>Music</span><span>Brunch</span></div>
+  </div>
+  <div class="city-body">
+    <div class="city-name">Nashville</div>
+    <div class="city-tagline"> hot chicken & good vibes</div>
+    <span class="city-arrow">Explore →</span>
+  </div>
+</a>
+
+      <!-- Scottsdale -->
+      <a class="city-card" href="cities/scottsdale.html">
+        <div class="city-img">
+          <div class="city-img-inner" style="background-image:url('images/scottsdale.jpeg')"></div>
+          <div class="city-img-overlay"></div>
+          <span class="city-flag">🇺🇸 Arizona</span>
+          <div class="city-vibe"><span>Wellness</span><span>Pool</span></div>
+        </div>
+        <div class="city-body">
+          <div class="city-name">Scottsdale</div>
+          <div class="city-tagline">Desert spa days, rooftop pools & western chic</div>
+          <span class="city-arrow">Explore →</span>
+        </div>
+      </a>
+
+      <!-- Charleston -->
+      <a class="city-card" href="cities/charleston.html">
+        <div class="city-img">
+          <div class="city-img-inner" style="background-image:url('images/charleston.jpeg')"></div>
+          <div class="city-img-overlay"></div>
+          <span class="city-flag">🇺🇸 South Carolina</span>
+          <div class="city-vibe"><span>Charming</span><span>Foodie</span></div>
+        </div>
+        <div class="city-body">
+          <div class="city-name">Charleston</div>
+          <div class="city-tagline"> shrimp & grits & southern charm</div>
+          <span class="city-arrow">Explore →</span>
+        </div>
+      </a>
+
+      <!-- Las Vegas -->
+      <a class="city-card" href="cities/lasvegas.html">
+        <div class="city-img">
+          <div class="city-img-inner" style="background-image:url('https://images.unsplash.com/photo-1581351721010-8cf859cb14a4?w=800&q=80')"></div>
+          <div class="city-img-overlay"></div>
+          <span class="city-flag">🇺🇸 Nevada</span>
+          <div class="city-vibe"><span>Party</span><span>Shows</span></div>
+        </div>
+        <div class="city-body">
+          <div class="city-name">Las Vegas</div>
+          <div class="city-tagline">What happens here, stays here!</div>
+          <span class="city-arrow">Explore →</span>
+        </div>
+      </a>
+
+      <!-- New York City -->
+      <a class="city-card" href="cities/nyc.html">
+        <div class="city-img">
+          <div class="city-img-inner" style="background-image:url('https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?w=800&q=80')"></div>
+          <div class="city-img-overlay"></div>
+          <span class="city-flag">🇺🇸 New York</span>
+          <div class="city-vibe"><span>Shopping</span><span>Culture</span></div>
+        </div>
+        <div class="city-body">
+          <div class="city-name">New York City</div>
+          <div class="city-tagline">The city that never sleeps</div>
+          <span class="city-arrow">Explore →</span>
+        </div>
+      </a>
+
+      <!-- Aspen -->
+      <a class="city-card" href="cities/aspen.html">
+        <div class="city-img">
+          <div class="city-img-inner" style="background-image:url('https://images.unsplash.com/photo-1551524559-8af4e6624178?w=800&q=80')"></div>
+          <div class="city-img-overlay"></div>
+          <span class="city-flag">🇺🇸 Colorado</span>
+          <div class="city-vibe"><span>Outdoors</span><span>Luxe</span></div>
+        </div>
+        <div class="city-body">
+          <div class="city-name">Aspen</div>
+          <div class="city-tagline">Ski slopes, cozy cabins & mountain magic</div>
+          <span class="city-arrow">Explore →</span>
+        </div>
+      </a>
+
+      <!-- Honolulu -->
+      <a class="city-card" href="cities/honolulu.html">
+        <div class="city-img">
+          <div class="city-img-inner" style="background-image:url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80')"></div>
+          <div class="city-img-overlay"></div>
+          <span class="city-flag">🇺🇸 Hawaii</span>
+          <div class="city-vibe"><span>Beach</span><span>Adventure</span></div>
+        </div>
+        <div class="city-body">
+          <div class="city-name">Honolulu</div>
+          <div class="city-tagline">Volcanic hikes & turquoise waves</div>
+          <span class="city-arrow">Explore →</span>
+        </div>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- ── ABOUT STRIP ── -->
+  <div class="about-strip" id="about">
+    <h2 class="about-title">Made by a girl, <em>for girls.</em></h2>
+    <p class="about-text">
+      Girls Next Stop is your curated guide to the best cities for a girls' trip.
+      Packed with the restaurants, nightlife, shopping, and stays that actually matter
+      when you're traveling with your ride-or-dies.
+    </p>
+  </div>
+
+  <!-- ── FOOTER ── -->
+  <footer>
+    <div class="foot-logo">Girls Next <span>Stop</span></div>
+    <div class="foot-copy">© 2026 Girls Next Stop · Made with 🩷</div>
+  </footer>
+
+  <!-- ── QUIZ MODAL ── -->
+  <div class="quiz-overlay" id="quizOverlay" onclick="handleOverlayClick(event)">
+    <div class="quiz-modal" id="quizModal">
+      <div class="quiz-modal-top">
+        <button class="quiz-close" onclick="closeQuiz()">✕</button>
+        <div class="quiz-icon">✈️</div>
+        <div class="quiz-modal-title">Find Your <em>Dream Trip</em></div>
+        <div class="quiz-modal-sub">Answer 5 quick questions and we'll match you with the perfect destination.</div>
+      </div>
+      <div class="quiz-progress-bar">
+        <div class="quiz-progress-fill" id="quizProgress" style="width:0%"></div>
+      </div>
+      <div class="quiz-body" id="quizBody"></div>
+      <div class="quiz-result" id="quizResult">
+        <div class="result-city-img" id="resultImg"></div>
+        <div class="result-match">Your perfect match ✨</div>
+        <div class="result-city-name" id="resultName"></div>
+        <div class="result-desc" id="resultDesc"></div>
+        <div class="result-btns">
+          <button class="result-retake" onclick="retakeQuiz()">Retake Quiz</button>
+          <button class="result-go" id="resultGoBtn">Explore This City →</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/quiz.js"></script>
+
+</body>
+</html>

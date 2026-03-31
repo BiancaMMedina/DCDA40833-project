@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Honolulu — Girls Next Stop</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=Cormorant+Garamond:ital,wght@0,300;1,300;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/styles.css" />
+</head>
+<body>
+
+  <nav>
+    <div class="nav-logo" onclick="window.location.href='../index.html'">Girls Next <span>Stop</span></div>
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../index.html#cities">Destinations</a></li>
+      <li><button class="nav-quiz-btn" onclick="openQuiz()">✨ Find My City</button></li>
+    </ul>
+  </nav>
+
+  <div class="city-hero-wrap" style="background-image:url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1600&q=80')">
+    <div class="city-hero-grad"></div>
+    <div class="city-hero-txt">
+      <div class="city-hero-country">Hawaii, USA</div>
+      <div class="city-hero-name">Honolulu</div>
+      <div class="city-hero-tagline">Aloha vibes, volcanic hikes & turquoise waves all day every day.</div>
+    </div>
+  </div>
+
+  <div class="city-back-bar">
+    <button class="city-back-btn" onclick="window.location.href='../index.html#cities'">← All Destinations</button>
+  </div>
+
+  <div class="city-content">
+    <div class="city-tabs">
+      <button class="tab-btn active" onclick="switchTab(this,'hon-food')">🍳 Brunch & Food</button>
+      <button class="tab-btn" onclick="switchTab(this,'hon-night')">🍸 Nightlife</button>
+      <button class="tab-btn" onclick="switchTab(this,'hon-shop')">🛍 Shopping</button>
+      <button class="tab-btn" onclick="switchTab(this,'hon-do')">✨ Things To Do</button>
+      <button class="tab-btn" onclick="switchTab(this,'hon-stay')">🏨 Where To Stay</button>
+    </div>
+
+    <div class="tab-panel active" id="hon-food">
+      <h3 class="panel-title">Brunch & <em>Food</em></h3>
+      <div class="picks-grid">
+        <div class="pick"><div class="pick-emoji">🌺</div><div class="pick-name">Livestock Tavern</div><div class="pick-desc">One of the best restaurants in Honolulu — farm-to-table Hawaiian cuisine in a beautiful setting in Chinatown.</div><div class="pick-foot"><span class="pick-price">$$$</span><span class="pick-badge">Best in HNL</span></div></div>
+        <div class="pick"><div class="pick-emoji">🥗</div><div class="pick-name">Heavenly Island Lifestyle</div><div class="pick-desc">Gorgeous plant-forward café steps from Waikiki Beach. The acai bowls and smoothies are absolutely stunning.</div><div class="pick-foot"><span class="pick-price">$$</span><span class="pick-badge">Beach Fuel</span></div></div>
+        <div class="pick"><div class="pick-emoji">🐟</div><div class="pick-name">Ono Seafood</div><div class="pick-desc">The best poke in Honolulu — fresh, local, and incredibly affordable. Order the ahi shoyu and don't look back.</div><div class="pick-foot"><span class="pick-price">$</span><span class="pick-badge">Must Try</span></div></div>
+      </div>
+    </div>
+
+    <div class="tab-panel" id="hon-night">
+      <h3 class="panel-title"><em>Nightlife</em> & Bars</h3>
+      <div class="picks-grid">
+        <div class="pick"><div class="pick-emoji">🌺</div><div class="pick-name">House Without a Key</div><div class="pick-desc">Iconic open-air bar at the Halekulani hotel with live Hawaiian music and hula dancing at sunset. Absolute magic.</div><div class="pick-foot"><span class="pick-price">$$$</span><span class="pick-badge">Most Magical</span></div></div>
+        <div class="pick"><div class="pick-emoji">🍹</div><div class="pick-name">Tiki's Grill & Bar</div><div class="pick-desc">Oceanfront bar with gorgeous Waikiki Beach views, live music, and strong tropical cocktails. Perfect girls' night spot.</div><div class="pick-foot"><span class="pick-price">$$</span><span class="pick-badge">Beachfront Vibes</span></div></div>
+        <div class="pick"><div class="pick-emoji">🌙</div><div class="pick-name">Chinatown Bar Scene</div><div class="pick-desc">Honolulu's hippest neighborhood for bars and nightlife. Manifest, Bar 35, and The Tchin Tchin Bar are all great.</div><div class="pick-foot"><span class="pick-price">$$</span><span class="pick-badge">Local Scene</span></div></div>
+      </div>
+    </div>
+
+    <div class="tab-panel" id="hon-shop">
+      <h3 class="panel-title"><em>Shopping</em></h3>
+      <div class="picks-grid">
+        <div class="pick"><div class="pick-emoji">🌺</div><div class="pick-name">Ala Moana Center</div><div class="pick-desc">The largest open-air shopping mall in the world with over 350 stores including every luxury brand and local boutique.</div><div class="pick-foot"><span class="pick-price">$$-$$$$</span><span class="pick-badge">Best Mall</span></div></div>
+        <div class="pick"><div class="pick-emoji">👗</div><div class="pick-name">Waikiki Luxury Row</div><div class="pick-desc">Chanel, Gucci, Tiffany — the luxury retail strip on Kalakaua Avenue. Treat yourself to something special in paradise.</div><div class="pick-foot"><span class="pick-price">$$$$</span><span class="pick-badge">Luxury</span></div></div>
+        <div class="pick"><div class="pick-emoji">🏺</div><div class="pick-name">KCC Farmers Market</div><div class="pick-desc">Saturday morning farmers market with incredible local vendors. Best place to find authentic Hawaiian products and gifts.</div><div class="pick-foot"><span class="pick-price">$</span><span class="pick-badge">Local Fave</span></div></div>
+      </div>
+    </div>
+
+    <div class="tab-panel" id="hon-do">
+      <h3 class="panel-title">Things <em>To Do</em></h3>
+      <div class="picks-grid">
+        <div class="pick"><div class="pick-emoji">🥾</div><div class="pick-name">Diamond Head Crater Hike</div><div class="pick-desc">The iconic Honolulu hike with a stunning panoramic view of Waikiki from the rim. Go at sunrise to beat the heat.</div><div class="pick-foot"><span class="pick-price">$</span><span class="pick-badge">Must Do</span></div></div>
+        <div class="pick"><div class="pick-emoji">🏄‍♀️</div><div class="pick-name">Learn to Surf at Waikiki</div><div class="pick-desc">Waikiki has the most beginner-friendly waves in the world. Take a group surf lesson — you will stand up and you will love it.</div><div class="pick-foot"><span class="pick-price">$$</span><span class="pick-badge">Girls' Essential</span></div></div>
+        <div class="pick"><div class="pick-emoji">🐢</div><div class="pick-name">Snorkeling at Hanauma Bay</div><div class="pick-desc">A stunning protected marine sanctuary with crystal clear water and sea turtles. Book your entry reservation in advance.</div><div class="pick-foot"><span class="pick-price">$$</span><span class="pick-badge">Bucket List</span></div></div>
+      </div>
+    </div>
+
+    <div class="tab-panel" id="hon-stay">
+      <h3 class="panel-title">Where <em>To Stay</em></h3>
+      <div class="picks-grid">
+        <div class="pick"><div class="pick-emoji">🏨</div><div class="pick-name">Halekulani Hotel</div><div class="pick-desc">The most legendary luxury hotel in Hawaii with impeccable service, a stunning pool, and the most beautiful Waikiki location.</div><div class="pick-foot"><span class="pick-price">$$$$</span><span class="pick-badge">Most Iconic</span></div></div>
+        <div class="pick"><div class="pick-emoji">✨</div><div class="pick-name">Surfjack Hotel</div><div class="pick-desc">Retro-cool boutique hotel with the most Instagram-worthy pool in Honolulu. Young, stylish, and great location.</div><div class="pick-foot"><span class="pick-price">$$$</span><span class="pick-badge">Most Aesthetic</span></div></div>
+        <div class="pick"><div class="pick-emoji">🌺</div><div class="pick-name">Airbnb in Kaimuki</div><div class="pick-desc">Stay in the charming Kaimuki neighborhood for a more local Honolulu experience with the best restaurants at your doorstep.</div><div class="pick-foot"><span class="pick-price">$$</span><span class="pick-badge">Local Vibe</span></div></div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="foot-logo">Girls Next <span>Stop</span></div>
+    <div class="foot-copy">© 2026 Girls Next Stop · Made with 🩷</div>
+  </footer>
+
+  <div class="quiz-overlay" id="quizOverlay" onclick="handleOverlayClick(event)">
+    <div class="quiz-modal" id="quizModal">
+      <div class="quiz-modal-top">
+        <button class="quiz-close" onclick="closeQuiz()">✕</button>
+        <div class="quiz-icon">✈️</div>
+        <div class="quiz-modal-title">Find Your <em>Dream Trip</em></div>
+        <div class="quiz-modal-sub">Answer 5 quick questions and we'll match you with the perfect destination.</div>
+      </div>
+      <div class="quiz-progress-bar"><div class="quiz-progress-fill" id="quizProgress" style="width:0%"></div></div>
+      <div class="quiz-body" id="quizBody"></div>
+      <div class="quiz-result" id="quizResult">
+        <div class="result-city-img" id="resultImg"></div>
+        <div class="result-match">Your perfect match ✨</div>
+        <div class="result-city-name" id="resultName"></div>
+        <div class="result-desc" id="resultDesc"></div>
+        <div class="result-btns">
+          <button class="result-retake" onclick="retakeQuiz()">Retake Quiz</button>
+          <button class="result-go" id="resultGoBtn">Explore This City →</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="../js/quiz.js"></script>
+</body>
+</html>

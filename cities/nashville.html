@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nashville — Girls Next Stop</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=Cormorant+Garamond:ital,wght@0,300;1,300;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/styles.css" />
+</head>
+<body>
+
+  <!-- ── NAV ── -->
+  <nav>
+    <div class="nav-logo" onclick="window.location.href='../index.html'">Girls Next <span>Stop</span></div>
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../index.html#cities">Destinations</a></li>
+      <li><button class="nav-quiz-btn" onclick="openQuiz()">✨ Find My City</button></li>
+    </ul>
+  </nav>
+
+ <!-- ── HERO ── -->
+  <div class="city-hero-wrap" style="background-image:url('../images/nashville.jpg'); background-size:cover; background-position:center; height:62vh; min-height:420px; display:flex; align-items:flex-end; padding:52px; margin-top:66px; position:relative;">
+  <div class="city-hero-grad"></div>
+  <div class="city-hero-txt">
+    <div class="city-hero-country">Tennessee, USA</div>
+    <div class="city-hero-name">Nashville</div>
+    <div class="city-hero-tagline">Honky-tonks, hot chicken & good vibes all weekend long.</div>
+  </div>
+</div>
+
+  <div class="city-back-bar">
+    <button class="city-back-btn" onclick="window.location.href='../index.html#cities'">← All Destinations</button>
+  </div>
+
+  <div class="city-content">
+    <div class="city-tabs">
+      <button class="tab-btn active" onclick="switchTab(this,'nash-food')">🍳 Brunch & Food</button>
+      <button class="tab-btn" onclick="switchTab(this,'nash-night')">🍸 Nightlife</button>
+      <button class="tab-btn" onclick="switchTab(this,'nash-shop')">🛍 Shopping</button>
+      <button class="tab-btn" onclick="switchTab(this,'nash-do')">✨ Things To Do</button>
+      <button class="tab-btn" onclick="switchTab(this,'nash-stay')">🏨 Where To Stay</button>
+    </div>
+
+    <div class="tab-panel active" id="nash-food">
+      <h3 class="panel-title">Brunch & <em>Food</em></h3>
+      <div class="picks-grid">
+        <div class="pick"><div class="pick-emoji">🥞</div><div class="pick-name">The Butter Milk Ranch</div><div class="pick-desc">A stylish yet laid-back brunch spot serving Southern comfort classics with a modern twist — think fluffy pancakes, crispy chicken, and aesthetic plates.</div><div class="pick-foot"><span class="pick-price">$$</span><span class="pick-badge">⭐ 4.6</span></div></div>
+        <div class="pick"><div class="pick-emoji">🍯</div><div class="pick-name">Milk and Honey Gulch</div><div class="pick-desc">Bright and trendy café known for its all-day brunch menu, fresh pastries, hearty breakfast plates, and a cozy Instagram-worthy atmosphere.</div><div class="pick-foot"><span class="pick-price">$$</span><span class="pick-badge">⭐ 4.4</span></div></div>
+        <div class="pick"><div class="pick-emoji">☕</div><div class="pick-name">Frothy Monkey</div><div class="pick-desc">A relaxed neighborhood café offering great coffee, simple brunch favorites, and a warm, artsy vibe perfect for a casual morning.</div><div class="pick-foot"><span class="pick-price">$</span><span class="pick-badge">⭐ 4.4</span></div></div>
+        <div class="pick"><div class="pick-emoji">🥘</div><div class="pick-name">Boqueria Fifth + Broadway</div><div class="pick-desc">A lively Spanish tapas spot bringing bold flavors to brunch and lunch with shareable plates, sangria, and a vibrant social dining experience.</div><div class="pick-foot"><span class="pick-price">$$–$$$</span><span class="pick-badge">⭐ 4.7</span></div></div>
+        <div class="pick"><div class="pick-emoji">🍖</div><div class="pick-name">Edley's Bar-B-Que</div><div class="pick-desc">A go-to for authentic Southern BBQ, serving smoked meats, classic sides, and a relaxed welcoming atmosphere full of local flavor.</div><div class="pick-foot"><span class="pick-price">$–$$</span><span class="pick-badge">⭐ 4.6</span></div></div>
+        <div class="pick"><div class="pick-emoji">🍔</div><div class="pick-name">Bad Luck Burger Club</div><div class="pick-desc">A trendy, no-frills burger spot known for juicy stacked burgers, crispy fries, and a cool slightly edgy vibe.</div><div class="pick-foot"><span class="pick-price">$–$$</span><span class="pick-badge">⭐ 4.8</span></div></div>
+      </div>
+    </div>
+
+    <div class="tab-panel" id="nash-night">
+      <h3 class="panel-title"><em>Nightlife</em> & Bars</h3>
+      <div class="picks-grid">
+        <div class="pick"><div class="pick-emoji">🎸</div><div class="pick-name">Rippy's Honky Tonk</div><div class="pick-desc">A classic Broadway honky-tonk with live bands, rooftop views, and a fun high-energy crowd.</div><div class="pick-foot"><span class="pick-price">$–$$</span><span class="pick-badge">⭐ 4.2</span></div></div>
+        <div class="pick"><div class="pick-emoji">🌸</div><div class="pick-name">Tootsie's Orchid Lounge</div><div class="pick-desc">An iconic Nashville staple where rising country artists perform all day and night in a vibrant, historic setting.</div><div class="pick-foot"><span class="pick-price">$–$$</span><span class="pick-badge">⭐ 4.4</span></div></div>
+        <div class="pick"><div class="pick-emoji">🎲</div><div class="pick-name">Lucky Bastard Saloon</div><div class="pick-desc">A casual sports bar-meets-party spot with live music, DJs, and a lively rooftop scene.</div><div class="pick-foot"><span class="pick-price">$–$$</span><span class="pick-badge">⭐ 4.4</span></div></div>
+        <div class="pick"><div class="pick-emoji">🎵</div><div class="pick-name">Honky Tonk Central</div><div class="pick-desc">A multi-level venue packed with live music, dance floors, and nonstop energy right on Broadway.</div><div class="pick-foot"><span class="pick-price">$–$$</span><span class="pick-badge">⭐ 4.4</span></div></div>
+        <div class="pick"><div class="pick-emoji">🥂</div><div class="pick-name">The Twelve Thirty Club</div><div class="pick-desc">An upscale entertainment space blending live music, cocktails, and rooftop dining with a polished modern feel.</div><div class="pick-foot"><span class="pick-price">$–$$$</span><span class="pick-badge">⭐ 4.5</span></div></div>
+        <div class="pick"><div class="pick-emoji">🌙</div><div class="pick-name">L.A. Jackson</div><div class="pick-desc">A chic rooftop bar offering craft cocktails, skyline views, and a stylish crowd — perfect for a more elevated night out.</div><div class="pick-foot"><span class="pick-price">$–$$</span><span class="pick-badge">⭐ 4.5</span></div></div>
+      </div>
+    </div>
+
+    <div class="tab-panel" id="nash-shop">
+      <h3 class="panel-title"><em>Shopping</em></h3>
+      <div class="picks-grid">
+        <div class="pick"><div class="pick-emoji">👗</div><div class="pick-name">Molly Green Hillsboro Village</div><div class="pick-desc">A trendy boutique filled with stylish clothing, accessories, and unique pieces that feel effortlessly Nashville-chic.</div><div class="pick-foot"><span class="pick-price">$–$$$</span><span class="pick-badge">⭐ 4.9</span></div></div>
+        <div class="pick"><div class="pick-emoji">🕺</div><div class="pick-name">The Hip Zipper Vintage</div><div class="pick-desc">A fun, eclectic vintage shop packed with retro fashion finds, statement pieces, and one-of-a-kind gems.</div><div class="pick-foot"><span class="pick-price">$–$$</span><span class="pick-badge">⭐ 4.3</span></div></div>
+        <div class="pick"><div class="pick-emoji">📸</div><div class="pick-name">12 South Nashville</div><div class="pick-desc">A walkable, Instagram-famous neighborhood lined with boutiques, cafés, murals, and trendy local shops.</div><div class="pick-foot"><span class="pick-price">$–$$$</span><span class="pick-badge"></span></div></div>
+        <div class="pick"><div class="pick-emoji">🤠</div><div class="pick-name">Rustler Hat Co.</div><div class="pick-desc">A custom hat bar where you can design your own personalized cowboy hat with unique details and finishes.</div><div class="pick-foot"><span class="pick-price">$$–$$$</span><span class="pick-badge">⭐ 4.9</span></div></div>
+        <div class="pick"><div class="pick-emoji">🛍</div><div class="pick-name">The Mall at Green Hills</div><div class="pick-desc">Nashville's premier shopping destination featuring luxury brands, department stores, and upscale dining options.</div><div class="pick-foot"><span class="pick-price">$–$$$$</span><span class="pick-badge">⭐ 4.4</span></div></div>
+        <div class="pick"><div class="pick-emoji">👢</div><div class="pick-name">Boot Barn Nashville</div><div class="pick-desc">A Western-style retail store offering boots, hats, and country-inspired apparel — perfect for a Nashville look.</div><div class="pick-foot"><span class="pick-price">$–$$$</span><span class="pick-badge">⭐ 4.4</span></div></div>
+      </div>
+    </div>
+
+    <div class="tab-panel" id="nash-do">
+      <h3 class="panel-title">Things <em>To Do</em></h3>
+      <div class="picks-grid">
+        <div class="pick"><div class="pick-emoji">🎨</div><div class="pick-name">Frist Art Museum</div><div class="pick-desc">A beautifully curated art museum with rotating exhibits spanning contemporary, classical, and cultural works.</div><div class="pick-foot"><span class="pick-price">$$</span><span class="pick-badge">⭐ 4.6</span></div></div>
+        <div class="pick"><div class="pick-emoji">🌿</div><div class="pick-name">Radnor Lake State Park</div><div class="pick-desc">A peaceful nature escape with scenic hiking trails, wildlife views, and serene lake landscapes.</div><div class="pick-foot"><span class="pick-price">Free</span><span class="pick-badge">⭐ 4.7</span></div></div>
+        <div class="pick"><div class="pick-emoji">🎵</div><div class="pick-name">Country Music Hall of Fame</div><div class="pick-desc">An immersive museum celebrating country music legends, history, and iconic memorabilia.</div><div class="pick-foot"><span class="pick-price">$$</span><span class="pick-badge">⭐ 4.6</span></div></div>
+        <div class="pick"><div class="pick-emoji">🎤</div><div class="pick-name">Grand Ole Opry</div><div class="pick-desc">A legendary live music experience showcasing top country artists in an unforgettable setting.</div><div class="pick-foot"><span class="pick-price">$$–$$$</span><span class="pick-badge">⭐ 4.8</span></div></div>
+        <div class="pick"><div class="pick-emoji">🏛</div><div class="pick-name">Centennial Park</div><div class="pick-desc">A scenic urban park home to Nashville's full-scale Parthenon replica, walking paths, and open green space.</div><div class="pick-foot"><span class="pick-price">Free</span><span class="pick-badge">⭐ 4.7</span></div></div>
+        <div class="pick"><div class="pick-emoji">🎶</div><div class="pick-name">National Museum of African American Music</div><div class="pick-desc">A powerful, interactive museum highlighting the impact of African American music across genres and history.</div><div class="pick-foot"><span class="pick-price">$$</span><span class="pick-badge">⭐ 4.9</span></div></div>
+      </div>
+    </div>
+
+    <div class="tab-panel" id="nash-stay">
+      <h3 class="panel-title">Where <em>To Stay</em></h3>
+      <div class="picks-grid">
+        <div class="pick"><div class="pick-emoji">🏨</div><div class="pick-name">Conrad Nashville</div><div class="pick-desc">A sleek, modern luxury hotel offering spacious rooms, upscale dining, and a refined yet relaxed atmosphere.</div><div class="pick-foot"><span class="pick-price">$$$</span><span class="pick-badge">⭐ 4.6</span></div></div>
+        <div class="pick"><div class="pick-emoji">🎨</div><div class="pick-name">The Joseph Nashville</div><div class="pick-desc">An art-forward luxury hotel with high-end amenities, a rooftop pool, and sophisticated design throughout.</div><div class="pick-foot"><span class="pick-price">$$$–$$$$</span><span class="pick-badge">⭐ 4.5</span></div></div>
+        <div class="pick"><div class="pick-emoji">✨</div><div class="pick-name">The Hermitage Hotel</div><div class="pick-desc">A historic, elegant hotel known for its grand interiors, classic Southern luxury, and impeccable service.</div><div class="pick-foot"><span class="pick-price">$$$–$$$$</span><span class="pick-badge">⭐ 4.7</span></div></div>
+        <div class="pick"><div class="pick-emoji">🌊</div><div class="pick-name">Four Seasons Hotel Nashville</div><div class="pick-desc">Ultra-luxury waterfront property with stunning views, world-class service, and elevated dining experiences.</div><div class="pick-foot"><span class="pick-price">$$$</span><span class="pick-badge">⭐ 4.6</span></div></div>
+        <div class="pick"><div class="pick-emoji">🎸</div><div class="pick-name">Noelle Nashville Hotel</div><div class="pick-desc">A boutique hotel blending historic charm with modern design, plus a popular rooftop bar and creative vibe.</div><div class="pick-foot"><span class="pick-price">$$$</span><span class="pick-badge">⭐ 4.5</span></div></div>
+        <div class="pick"><div class="pick-emoji">🎶</div><div class="pick-name">Dream Nashville by Hyatt</div><div class="pick-desc">A trendy, music-inspired hotel featuring stylish rooms, nightlife access, and a vibrant downtown location.</div><div class="pick-foot"><span class="pick-price">$$$</span><span class="pick-badge">⭐ 4.5</span></div></div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="foot-logo">Girls Next <span>Stop</span></div>
+    <div class="foot-copy">© 2026 Girls Next Stop · Made with 🩷</div>
+  </footer>
+
+  <div class="quiz-overlay" id="quizOverlay" onclick="handleOverlayClick(event)">
+    <div class="quiz-modal" id="quizModal">
+      <div class="quiz-modal-top">
+        <button class="quiz-close" onclick="closeQuiz()">✕</button>
+        <div class="quiz-icon">✈️</div>
+        <div class="quiz-modal-title">Find Your <em>Dream Trip</em></div>
+        <div class="quiz-modal-sub">Answer 5 quick questions and we'll match you with the perfect destination.</div>
+      </div>
+      <div class="quiz-progress-bar"><div class="quiz-progress-fill" id="quizProgress" style="width:0%"></div></div>
+      <div class="quiz-body" id="quizBody"></div>
+      <div class="quiz-result" id="quizResult">
+        <div class="result-city-img" id="resultImg"></div>
+        <div class="result-match">Your perfect match ✨</div>
+        <div class="result-city-name" id="resultName"></div>
+        <div class="result-desc" id="resultDesc"></div>
+        <div class="result-btns">
+          <button class="result-retake" onclick="retakeQuiz()">Retake Quiz</button>
+          <button class="result-go" id="resultGoBtn">Explore This City →</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="../js/quiz.js"></script>
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aspen — Girls Next Stop</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=Cormorant+Garamond:ital,wght@0,300;1,300;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/styles.css" />
+</head>
+<body>
+
+  <nav>
+    <div class="nav-logo" onclick="window.location.href='../index.html'">Girls Next <span>Stop</span></div>
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../index.html#cities">Destinations</a></li>
+      <li><button class="nav-quiz-btn" onclick="openQuiz()">✨ Find My City</button></li>
+    </ul>
+  </nav>
+
+  <div class="city-hero-wrap" style="background-image:url('https://images.unsplash.com/photo-1551524559-8af4e6624178?w=1600&q=80')">
+    <div class="city-hero-grad"></div>
+    <div class="city-hero-txt">
+      <div class="city-hero-country">Colorado, USA</div>
+      <div class="city-hero-name">Aspen</div>
+      <div class="city-hero-tagline">Ski slopes, cozy cabins & mountain magic all year round.</div>
+    </div>
+  </div>
+
+  <div class="city-back-bar">
+    <button class="city-back-btn" onclick="window.location.href='../index.html#cities'">← All Destinations</button>
+  </div>
+
+  <div class="city-content">
+    <div class="city-tabs">
+      <button class="tab-btn active" onclick="switchTab(this,'asp-food')">🍳 Brunch & Food</button>
+      <button class="tab-btn" onclick="switchTab(this,'asp-night')">🍸 Nightlife</button>
+      <button class="tab-btn" onclick="switchTab(this,'asp-shop')">🛍 Shopping</button>
+      <button class="tab-btn" onclick="switchTab(this,'asp-do')">✨ Things To Do</button>
+      <button class="tab-btn" onclick="switchTab(this,'asp-stay')">🏨 Where To Stay</button>
+    </div>
+
+    <div class="tab-panel active" id="asp-food">
+      <h3 class="panel-title">Brunch & <em>Food</em></h3>
+      <div class="picks-grid">
+        <div class="pick"><div class="pick-emoji">🏔</div><div class="pick-name">element 47</div><div class="pick-desc">Inside The Little Nell — the finest dining in Aspen with an extraordinary wine cellar and mountain views. Special occasion dining.</div><div class="pick-foot"><span class="pick-price">$$$$</span><span class="pick-badge">Best in Aspen</span></div></div>
+        <div class="pick"><div class="pick-emoji">🥞</div><div class="pick-name">Meat & Cheese</div><div class="pick-desc">Farm-to-table café and market in downtown Aspen. Perfect for a cozy breakfast or afternoon cheese board and wine.</div><div class="pick-foot"><span class="pick-price">$$</span><span class="pick-badge">Cozy Fave</span></div></div>
+        <div class="pick"><div class="pick-emoji">☕</div><div class="pick-name">Justice Snow's</div><div class="pick-desc">Beautiful bar and restaurant in a historic building in downtown Aspen. Great cocktails and a cozy après-ski atmosphere.</div><div class="pick-foot"><span class="pick-price">$$$</span><span class="pick-badge">Après-Ski</span></div></div>
+      </div>
+    </div>
+
+    <div class="tab-panel" id="asp-night">
+      <h3 class="panel-title"><em>Nightlife</em> & Bars</h3>
+      <div class="picks-grid">
+        <div class="pick"><div class="pick-emoji">🎿</div><div class="pick-name">Après-Ski at Ajax Tavern</div><div class="pick-desc">The ultimate après-ski spot at the base of Aspen Mountain. Truffle fries, champagne, and ski boots. Peak Aspen.</div><div class="pick-foot"><span class="pick-price">$$$</span><span class="pick-badge">Must Do</span></div></div>
+        <div class="pick"><div class="pick-emoji">🍷</div><div class="pick-name">Bar at The Little Nell</div><div class="pick-desc">The most glamorous bar in Aspen inside the most iconic hotel. World-class wine list and a cozy, beautiful setting.</div><div class="pick-foot"><span class="pick-price">$$$$</span><span class="pick-badge">Most Glamorous</span></div></div>
+        <div class="pick"><div class="pick-emoji">🌙</div><div class="pick-name">Escobar</div><div class="pick-desc">Aspen's most popular late-night bar with a lively atmosphere and great cocktails. Where locals and visitors all end up.</div><div class="pick-foot"><span class="pick-price">$$$</span><span class="pick-badge">Late Night</span></div></div>
+      </div>
+    </div>
+
+    <div class="tab-panel" id="asp-shop">
+      <h3 class="panel-title"><em>Shopping</em></h3>
+      <div class="picks-grid">
+        <div class="pick"><div class="pick-emoji">🧥</div><div class="pick-name">Aspen Core</div><div class="pick-desc">Downtown Aspen is lined with luxury boutiques — Prada, Louis Vuitton, Gucci — all in a charming mountain town setting.</div><div class="pick-foot"><span class="pick-price">$$$$</span><span class="pick-badge">Luxury</span></div></div>
+        <div class="pick"><div class="pick-emoji">🎿</div><div class="pick-name">Gorsuch</div><div class="pick-desc">The most iconic ski and lifestyle boutique in Aspen. Beautiful ski gear, cashmere, and après-ski fashion.</div><div class="pick-foot"><span class="pick-price">$$$$</span><span class="pick-badge">Aspen Icon</span></div></div>
+        <div class="pick"><div class="pick-emoji">🌿</div><div class="pick-name">Pitkin County Dry Goods</div><div class="pick-desc">Charming local boutique with an incredible edit of women's clothing, gifts, and home goods. Very Aspen.</div><div class="pick-foot"><span class="pick-price">$$$</span><span class="pick-badge">Local Fave</span></div></div>
+      </div>
+    </div>
+
+    <div class="tab-panel" id="asp-do">
+      <h3 class="panel-title">Things <em>To Do</em></h3>
+      <div class="picks-grid">
+        <div class="pick"><div class="pick-emoji">⛷️</div><div class="pick-name">Ski Aspen Mountain</div><div class="pick-desc">Aspen Mountain (Ajax) is one of the most legendary ski mountains in the world. No beginner runs — pure Aspen thrill.</div><div class="pick-foot"><span class="pick-price">$$$$</span><span class="pick-badge">What You're Here For</span></div></div>
+        <div class="pick"><div class="pick-emoji">🥾</div><div class="pick-name">Maroon Bells Hike</div><div class="pick-desc">The most photographed mountain scene in North America. A short hike to the most surreally beautiful alpine lake.</div><div class="pick-foot"><span class="pick-price">$</span><span class="pick-badge">Bucket List</span></div></div>
+        <div class="pick"><div class="pick-emoji">💆‍♀️</div><div class="pick-name">Remède Spa at St. Regis</div><div class="pick-desc">Award-winning mountain spa with treatments designed around the altitude. The steam room and hot tub alone are worth it.</div><div class="pick-foot"><span class="pick-price">$$$$</span><span class="pick-badge">Girls' Day</span></div></div>
+      </div>
+    </div>
+
+    <div class="tab-panel" id="asp-stay">
+      <h3 class="panel-title">Where <em>To Stay</em></h3>
+      <div class="picks-grid">
+        <div class="pick"><div class="pick-emoji">🏨</div><div class="pick-name">The Little Nell</div><div class="pick-desc">The most iconic hotel in Aspen — ski-in, ski-out at the base of Ajax with impeccable service and extraordinary dining.</div><div class="pick-foot"><span class="pick-price">$$$$</span><span class="pick-badge">Most Iconic</span></div></div>
+        <div class="pick"><div class="pick-emoji">✨</div><div class="pick-name">Hotel Jerome</div><div class="pick-desc">Historic 1889 hotel in the heart of downtown Aspen. Cozy, elegant, and dripping with mountain character.</div><div class="pick-foot"><span class="pick-price">$$$$</span><span class="pick-badge">Most Historic</span></div></div>
+        <div class="pick"><div class="pick-emoji">🏡</div><div class="pick-name">VRBO Cabin in Snowmass</div><div class="pick-desc">Rent a gorgeous mountain cabin in nearby Snowmass for the full cozy girls' trip experience — hot tub, fireplace, mountains.</div><div class="pick-foot"><span class="pick-price">$$$</span><span class="pick-badge">Coziest Option</span></div></div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="foot-logo">Girls Next <span>Stop</span></div>
+    <div class="foot-copy">© 2026 Girls Next Stop · Made with 🩷</div>
+  </footer>
+
+  <div class="quiz-overlay" id="quizOverlay" onclick="handleOverlayClick(event)">
+    <div class="quiz-modal" id="quizModal">
+      <div class="quiz-modal-top">
+        <button class="quiz-close" onclick="closeQuiz()">✕</button>
+        <div class="quiz-icon">✈️</div>
+        <div class="quiz-modal-title">Find Your <em>Dream Trip</em></div>
+        <div class="quiz-modal-sub">Answer 5 quick questions and we'll match you with the perfect destination.</div>
+      </div>
+      <div class="quiz-progress-bar"><div class="quiz-progress-fill" id="quizProgress" style="width:0%"></div></div>
+      <div class="quiz-body" id="quizBody"></div>
+      <div class="quiz-result" id="quizResult">
+        <div class="result-city-img" id="resultImg"></div>
+        <div class="result-match">Your perfect match ✨</div>
+        <div class="result-city-name" id="resultName"></div>
+        <div class="result-desc" id="resultDesc"></div>
+        <div class="result-btns">
+          <button class="result-retake" onclick="retakeQuiz()">Retake Quiz</button>
+          <button class="result-go" id="resultGoBtn">Explore This City →</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="../js/quiz.js"></script>
+</body>
+</html>

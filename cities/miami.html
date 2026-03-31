@@ -1,0 +1,143 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Miami — Girls Next Stop</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=Cormorant+Garamond:ital,wght@0,300;1,300;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/styles.css" />
+</head>
+<body>
+
+  <!-- ── NAV ── -->
+  <nav>
+    <div class="nav-logo" onclick="window.location.href='../index.html'">Girls Next <span>Stop</span></div>
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../index.html#cities">Destinations</a></li>
+      <li><button class="nav-quiz-btn" onclick="openQuiz()">✨ Find My City</button></li>
+    </ul>
+  </nav>
+
+  <!-- ── HERO ── -->
+  <div class="city-hero-wrap" style="background-image:url('https://images.unsplash.com/photo-1506966953602-c20cc11f75e3?w=1600&q=80')">
+    <div class="city-hero-grad"></div>
+    <div class="city-hero-txt">
+      <div class="city-hero-country">Florida, USA</div>
+      <div class="city-hero-name">Miami</div>
+      <div class="city-hero-tagline">Sun, sand, rooftops & art deco glam on every corner.</div>
+    </div>
+  </div>
+
+  <!-- ── BACK BAR ── -->
+  <div class="city-back-bar">
+    <button class="city-back-btn" onclick="window.location.href='../index.html#cities'">← All Destinations</button>
+  </div>
+
+  <!-- ── CONTENT ── -->
+  <div class="city-content">
+    <div class="city-tabs">
+      <button class="tab-btn active" onclick="switchTab(this,'mia-food')">🍳 Brunch & Food</button>
+      <button class="tab-btn" onclick="switchTab(this,'mia-night')">🍸 Nightlife</button>
+      <button class="tab-btn" onclick="switchTab(this,'mia-shop')">🛍 Shopping</button>
+      <button class="tab-btn" onclick="switchTab(this,'mia-do')">✨ Things To Do</button>
+      <button class="tab-btn" onclick="switchTab(this,'mia-stay')">🏨 Where To Stay</button>
+    </div>
+
+    <div class="tab-panel active" id="mia-food">
+      <h3 class="panel-title">Brunch & <em>Food</em></h3>
+      <div class="picks-grid">
+        <div class="pick"><div class="pick-emoji">🏙</div><div class="pick-name">Level 6 Rooftop Restaurant</div><div class="pick-desc">Spanish-influenced rooftop spot with great views and elevated brunch vibes.</div><div class="pick-foot"><span class="pick-price">$$$</span><span class="pick-badge">⭐ 4.7</span></div></div>
+        <div class="pick"><div class="pick-emoji">🌮</div><div class="pick-name">Ojo de Agua</div><div class="pick-desc">Trendy Mexican brunch spot known for aesthetic drinks and fresh dishes.</div><div class="pick-foot"><span class="pick-price">$$</span><span class="pick-badge">⭐ 4.4</span></div></div>
+        <div class="pick"><div class="pick-emoji">☀️</div><div class="pick-name">Greenstreet Cafe</div><div class="pick-desc">Classic Miami brunch staple with a relaxed outdoor café vibe.</div><div class="pick-foot"><span class="pick-price">$$</span><span class="pick-badge">⭐ 4.5</span></div></div>
+        <div class="pick"><div class="pick-emoji">🇯🇲</div><div class="pick-name">Mangrove Miami</div><div class="pick-desc">Casual Jamaican eatery with traditional dishes and a laid-back bar atmosphere.</div><div class="pick-foot"><span class="pick-price">$$</span><span class="pick-badge">⭐ 4.7</span></div></div>
+        <div class="pick"><div class="pick-emoji">🥐</div><div class="pick-name">Café Bastille</div><div class="pick-desc">French café serving all-day brunch favorites like crepes, omelettes, and eggs.</div><div class="pick-foot"><span class="pick-price">$$</span><span class="pick-badge">⭐ 4.8</span></div></div>
+        <div class="pick"><div class="pick-emoji">🧁</div><div class="pick-name">B Bistro + Bakery</div><div class="pick-desc">Affordable modern bakery known for pastries, desserts, and light brunch bites.</div><div class="pick-foot"><span class="pick-price">$</span><span class="pick-badge">⭐ 4.5</span></div></div>
+        <div class="pick"><div class="pick-emoji">🍣</div><div class="pick-name">Paperfish Sushi</div><div class="pick-desc">Stylish spot offering creative sushi, ceviche, and cocktails.</div><div class="pick-foot"><span class="pick-price">$$</span><span class="pick-badge">⭐ 4.5</span></div></div>
+      </div>
+    </div>
+
+    <div class="tab-panel" id="mia-night">
+      <h3 class="panel-title"><em>Nightlife</em> & Bars</h3>
+      <div class="picks-grid">
+        <div class="pick"><div class="pick-emoji">🪩</div><div class="pick-name">Broken Shaker</div><div class="pick-desc">Rooftop-style bar famous for creative cocktails and a chill, tropical vibe.</div><div class="pick-foot"><span class="pick-price">$$</span><span class="pick-badge">⭐ 4.5</span></div></div>
+        <div class="pick"><div class="pick-emoji">💃</div><div class="pick-name">El Patio Wynwood</div><div class="pick-desc">Cozy indoor-outdoor bar with Cuban rumba, dancing, and lively energy.</div><div class="pick-foot"><span class="pick-price">$$</span><span class="pick-badge">⭐ 4.4</span></div></div>
+        <div class="pick"><div class="pick-emoji">🎉</div><div class="pick-name">Club M2 Miami</div><div class="pick-desc">High-energy nightclub with dancing, live music, and strong party vibes.</div><div class="pick-foot"><span class="pick-price">$$</span><span class="pick-badge">⭐ 4.1</span></div></div>
+        <div class="pick"><div class="pick-emoji">🎷</div><div class="pick-name">Medium Cool Cocktail Lounge</div><div class="pick-desc">Intimate cocktail lounge with jazz, DJs, and a cozy nightlife feel.</div><div class="pick-foot"><span class="pick-price">$$</span><span class="pick-badge">⭐ 4.2</span></div></div>
+        <div class="pick"><div class="pick-emoji">🍕</div><div class="pick-name">The Beatrice Pizza Club</div><div class="pick-desc">Pizza shop in the front with a hidden speakeasy-style nightclub in the back.</div><div class="pick-foot"><span class="pick-price">$$</span><span class="pick-badge">⭐ 4.3</span></div></div>
+        <div class="pick"><div class="pick-emoji">🌿</div><div class="pick-name">BOHO House Miami</div><div class="pick-desc">Reservation-only spot with small plates, cocktails, and a chic boho courtyard vibe.</div><div class="pick-foot"><span class="pick-price">$$$</span><span class="pick-badge">⭐ 4.5</span></div></div>
+      </div>
+    </div>
+
+    <div class="tab-panel" id="mia-shop">
+      <h3 class="panel-title"><em>Shopping</em></h3>
+      <div class="picks-grid">
+        <div class="pick"><div class="pick-emoji">👗</div><div class="pick-name">Peachtree Revival</div><div class="pick-desc">Vintage and secondhand shop with curated trendy pieces.</div><div class="pick-foot"><span class="pick-price">$$</span><span class="pick-badge">⭐ 4.8</span></div></div>
+        <div class="pick"><div class="pick-emoji">🛒</div><div class="pick-name">Magic City Flea Market</div><div class="pick-desc">Sunday-only market with vintage finds, jewelry, and unique accessories.</div><div class="pick-foot"><span class="pick-price">$</span><span class="pick-badge">⭐ 4.9</span></div></div>
+        <div class="pick"><div class="pick-emoji">🌸</div><div class="pick-name">Wanitta</div><div class="pick-desc">Boutique with cute, girly, bohemian-style clothing.</div><div class="pick-foot"><span class="pick-price">$$</span><span class="pick-badge">⭐ 4.7</span></div></div>
+        <div class="pick"><div class="pick-emoji">✨</div><div class="pick-name">UmaLu Vintage</div><div class="pick-desc">Higher-end vintage shop with statement and designer pieces.</div><div class="pick-foot"><span class="pick-price">$$–$$$</span><span class="pick-badge">⭐ 4.9</span></div></div>
+        <div class="pick"><div class="pick-emoji">🌊</div><div class="pick-name">Bayside Marketplace</div><div class="pick-desc">Waterfront shopping area with stores, food, and live entertainment.</div><div class="pick-foot"><span class="pick-price">$$–$$$</span><span class="pick-badge">⭐ 4.5</span></div></div>
+        <div class="pick"><div class="pick-emoji">💎</div><div class="pick-name">Bal Harbour Shops</div><div class="pick-desc">Ultra-luxury open-air mall with designer brands and upscale shopping.</div><div class="pick-foot"><span class="pick-price">$$$$</span><span class="pick-badge">⭐ 4.7</span></div></div>
+      </div>
+    </div>
+
+    <div class="tab-panel" id="mia-do">
+  <h3 class="panel-title">Things <em>To Do</em></h3>
+  <div class="picks-grid">
+    <div class="pick"><div class="pick-emoji">🏛</div><div class="pick-name">Art Deco Historic District</div><div class="pick-desc">Iconic colorful buildings and architecture perfect for walking and photos.</div><div class="pick-foot"><span class="pick-price">$</span><span class="pick-badge">⭐ 4.7</span></div></div>
+    <div class="pick"><div class="pick-emoji">🌿</div><div class="pick-name">Vizcaya Museum and Gardens</div><div class="pick-desc">Stunning Italian-style villa and gardens, one of Miami's most photogenic spots.</div><div class="pick-foot"><span class="pick-price">$</span><span class="pick-badge">⭐ 4.7</span></div></div>
+    <div class="pick"><div class="pick-emoji">🏖</div><div class="pick-name">South Beach</div><div class="pick-desc">Famous beach with clear water, nightlife, and a lively atmosphere.</div><div class="pick-foot"><span class="pick-price">$</span><span class="pick-badge"></span></div></div>
+    <div class="pick"><div class="pick-emoji">🚤</div><div class="pick-name">Miami Boat Tours</div><div class="pick-desc">Scenic boat experiences showing the skyline, mansions, and ocean views.</div><div class="pick-foot"><span class="pick-price">$$–$$$</span><span class="pick-badge"></span></div></div>
+    <div class="pick"><div class="pick-emoji">💃</div><div class="pick-name">Ball & Chain</div><div class="pick-desc">Free salsa lessons every Thursday with live music and a fun Latin vibe.</div><div class="pick-foot"><span class="pick-price">$</span><span class="pick-badge">⭐ 4.6</span></div></div>
+    <div class="pick"><div class="pick-emoji">🇨🇺</div><div class="pick-name">Little Havana</div><div class="pick-desc">Experience authentic Cuban culture, coffee, and food on Calle Ocho, including Domino Park.</div><div class="pick-foot"><span class="pick-price">$</span><span class="pick-badge">Must Visit</span></div></div>
+  </div>
+</div>
+
+    <div class="tab-panel" id="mia-stay">
+  <h3 class="panel-title">Where <em>To Stay</em></h3>
+  <div class="picks-grid">
+    <div class="pick"><div class="pick-emoji">🏨</div><div class="pick-name">The Setai Miami Beach</div><div class="pick-desc">Ultra-luxurious hotel right on South Beach with three pools and impeccable service. The ultimate splurge.</div><div class="pick-foot"><span class="pick-price">$$$$</span><span class="pick-badge">Luxury Pick</span></div></div>
+    <div class="pick"><div class="pick-emoji">✨</div><div class="pick-name">Faena Hotel Miami Beach</div><div class="pick-desc">Wildly glamorous hotel designed by Baz Luhrmann. The pool scene alone is worth staying here.</div><div class="pick-foot"><span class="pick-price">$$$$</span><span class="pick-badge">Most Iconic</span></div></div>
+    <div class="pick"><div class="pick-emoji">🌴</div><div class="pick-name">Airbnb in Wynwood</div><div class="pick-desc">Stay in a chic Wynwood loft for a hipper, more local Miami experience close to the best restaurants and art.</div><div class="pick-foot"><span class="pick-price">$$</span><span class="pick-badge">Local Vibe</span></div></div>
+    <div class="pick"><div class="pick-emoji">🏙</div><div class="pick-name">EAST Miami</div><div class="pick-desc">Modern hotel connected to shopping with a popular rooftop bar.</div><div class="pick-foot"><span class="pick-price">$$$</span><span class="pick-badge">⭐ 4.5</span></div></div>
+    <div class="pick"><div class="pick-emoji">🌈</div><div class="pick-name">The Vagabond Hotel</div><div class="pick-desc">Retro boutique stay with a cool, laid-back Miami vibe.</div><div class="pick-foot"><span class="pick-price">$$</span><span class="pick-badge">⭐ 4.5</span></div></div>
+    <div class="pick"><div class="pick-emoji">🏩</div><div class="pick-name">YVE Hotel Miami</div><div class="pick-desc">Budget-friendly downtown option close to major attractions.</div><div class="pick-foot"><span class="pick-price">$$</span><span class="pick-badge">⭐ 3.7</span></div></div>
+    <div class="pick"><div class="pick-emoji">✈️</div><div class="pick-name">La Quinta by Wyndham Miami Airport West</div><div class="pick-desc">Basic and affordable, best if you don't mind commuting to hotspots.</div><div class="pick-foot"><span class="pick-price">$</span><span class="pick-badge">⭐ 3.9</span></div></div>
+  </div>
+</div>
+
+  <!-- ── FOOTER ── -->
+  <footer>
+    <div class="foot-logo">Girls Next <span>Stop</span></div>
+    <div class="foot-copy">© 2026 Girls Next Stop · Made with 🩷</div>
+  </footer>
+
+  <!-- ── QUIZ MODAL ── -->
+  <div class="quiz-overlay" id="quizOverlay" onclick="handleOverlayClick(event)">
+    <div class="quiz-modal" id="quizModal">
+      <div class="quiz-modal-top">
+        <button class="quiz-close" onclick="closeQuiz()">✕</button>
+        <div class="quiz-icon">✈️</div>
+        <div class="quiz-modal-title">Find Your <em>Dream Trip</em></div>
+        <div class="quiz-modal-sub">Answer 5 quick questions and we'll match you with the perfect destination.</div>
+      </div>
+      <div class="quiz-progress-bar"><div class="quiz-progress-fill" id="quizProgress" style="width:0%"></div></div>
+      <div class="quiz-body" id="quizBody"></div>
+      <div class="quiz-result" id="quizResult">
+        <div class="result-city-img" id="resultImg"></div>
+        <div class="result-match">Your perfect match ✨</div>
+        <div class="result-city-name" id="resultName"></div>
+        <div class="result-desc" id="resultDesc"></div>
+        <div class="result-btns">
+          <button class="result-retake" onclick="retakeQuiz()">Retake Quiz</button>
+          <button class="result-go" id="resultGoBtn">Explore This City →</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="../js/quiz.js"></script>
+</body>
+</html>
+
+  

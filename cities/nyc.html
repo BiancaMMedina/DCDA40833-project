@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>New York City — Girls Next Stop</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=Cormorant+Garamond:ital,wght@0,300;1,300;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/styles.css" />
+</head>
+<body>
+
+  <nav>
+    <div class="nav-logo" onclick="window.location.href='../index.html'">Girls Next <span>Stop</span></div>
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../index.html#cities">Destinations</a></li>
+      <li><button class="nav-quiz-btn" onclick="openQuiz()">✨ Find My City</button></li>
+    </ul>
+  </nav>
+
+  <div class="city-hero-wrap" style="background-image:url('https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?w=1600&q=80')">
+    <div class="city-hero-grad"></div>
+    <div class="city-hero-txt">
+      <div class="city-hero-country">New York, USA</div>
+      <div class="city-hero-name">New York City</div>
+      <div class="city-hero-tagline">The city that never stops serving looks, food, or energy.</div>
+    </div>
+  </div>
+
+  <div class="city-back-bar">
+    <button class="city-back-btn" onclick="window.location.href='../index.html#cities'">← All Destinations</button>
+  </div>
+
+  <div class="city-content">
+    <div class="city-tabs">
+      <button class="tab-btn active" onclick="switchTab(this,'nyc-food')">🍳 Brunch & Food</button>
+      <button class="tab-btn" onclick="switchTab(this,'nyc-night')">🍸 Nightlife</button>
+      <button class="tab-btn" onclick="switchTab(this,'nyc-shop')">🛍 Shopping</button>
+      <button class="tab-btn" onclick="switchTab(this,'nyc-do')">✨ Things To Do</button>
+      <button class="tab-btn" onclick="switchTab(this,'nyc-stay')">🏨 Where To Stay</button>
+    </div>
+
+    <div class="tab-panel active" id="nyc-food">
+      <h3 class="panel-title">Brunch & <em>Food</em></h3>
+      <div class="picks-grid">
+        <div class="pick"><div class="pick-emoji">🥐</div><div class="pick-name">Balthazar</div><div class="pick-desc">The quintessential NYC brasserie in SoHo. Go for weekend brunch — the pastry basket alone is worth the trip.</div><div class="pick-foot"><span class="pick-price">$$$</span><span class="pick-badge">Classic NYC</span></div></div>
+        <div class="pick"><div class="pick-emoji">🍕</div><div class="pick-name">Joe's Pizza</div><div class="pick-desc">Two dollar slices of the best New York pizza you'll ever eat. Non-negotiable midnight stop after a night out.</div><div class="pick-foot"><span class="pick-price">$</span><span class="pick-badge">Must Try</span></div></div>
+        <div class="pick"><div class="pick-emoji">☕</div><div class="pick-name">Via Carota</div><div class="pick-desc">Legendary West Village Italian. The cacio e pepe and insalata verde are iconic. Expect a wait but worth it.</div><div class="pick-foot"><span class="pick-price">$$$</span><span class="pick-badge">Girls' Dinner</span></div></div>
+      </div>
+    </div>
+
+    <div class="tab-panel" id="nyc-night">
+      <h3 class="panel-title"><em>Nightlife</em> & Bars</h3>
+      <div class="picks-grid">
+        <div class="pick"><div class="pick-emoji">🍸</div><div class="pick-name">Employees Only</div><div class="pick-desc">Speakeasy-style cocktail bar in the West Village. One of the best bars in the entire world. Go late.</div><div class="pick-foot"><span class="pick-price">$$$</span><span class="pick-badge">World Class</span></div></div>
+        <div class="pick"><div class="pick-emoji">🌃</div><div class="pick-name">230 Fifth Rooftop</div><div class="pick-desc">Massive rooftop bar with an unbeatable Empire State Building view. Heated in winter — iconic year round.</div><div class="pick-foot"><span class="pick-price">$$</span><span class="pick-badge">Best View</span></div></div>
+        <div class="pick"><div class="pick-emoji">🎶</div><div class="pick-name">Le Bain at The Standard</div><div class="pick-desc">The rooftop club at The Standard High Line. Dancing, a hot tub, and Hudson views. Pure NYC energy.</div><div class="pick-foot"><span class="pick-price">$$$</span><span class="pick-badge">Night Out</span></div></div>
+      </div>
+    </div>
+
+    <div class="tab-panel" id="nyc-shop">
+      <h3 class="panel-title"><em>Shopping</em></h3>
+      <div class="picks-grid">
+        <div class="pick"><div class="pick-emoji">🛍</div><div class="pick-name">SoHo</div><div class="pick-desc">The ultimate NYC shopping neighborhood — Reformation, Aritzia, Chanel, and every boutique in between.</div><div class="pick-foot"><span class="pick-price">$-$$$$</span><span class="pick-badge">Best Neighborhood</span></div></div>
+        <div class="pick"><div class="pick-emoji">💄</div><div class="pick-name">Sephora on 34th St</div><div class="pick-desc">The flagship Sephora near Herald Square. Biggest selection, all the testers — beauty lover's paradise.</div><div class="pick-foot"><span class="pick-price">$$</span><span class="pick-badge">Beauty Girls</span></div></div>
+        <div class="pick"><div class="pick-emoji">👜</div><div class="pick-name">The RealReal SoHo</div><div class="pick-desc">Luxury consignment with an incredible rotating selection. Find a Chanel bag for a fraction of retail.</div><div class="pick-foot"><span class="pick-price">$$-$$$</span><span class="pick-badge">Smart Splurge</span></div></div>
+      </div>
+    </div>
+
+    <div class="tab-panel" id="nyc-do">
+      <h3 class="panel-title">Things <em>To Do</em></h3>
+      <div class="picks-grid">
+        <div class="pick"><div class="pick-emoji">🚶‍♀️</div><div class="pick-name">The High Line</div><div class="pick-desc">Elevated park built on a former rail line. Walk the whole thing, stop for coffee, and end in Chelsea Market.</div><div class="pick-foot"><span class="pick-price">Free</span><span class="pick-badge">Can't Miss</span></div></div>
+        <div class="pick"><div class="pick-emoji">🎭</div><div class="pick-name">Broadway Show</div><div class="pick-desc">Get discount TKTS tickets in Times Square on the day of the show for up to 50% off. A NYC must.</div><div class="pick-foot"><span class="pick-price">$$-$$$</span><span class="pick-badge">NYC Bucket List</span></div></div>
+        <div class="pick"><div class="pick-emoji">🌳</div><div class="pick-name">Central Park Picnic</div><div class="pick-desc">Grab food from Eataly or a deli and have a Central Park picnic. Pure NYC magic, especially in spring or fall.</div><div class="pick-foot"><span class="pick-price">$</span><span class="pick-badge">Free Fun</span></div></div>
+      </div>
+    </div>
+
+    <div class="tab-panel" id="nyc-stay">
+      <h3 class="panel-title">Where <em>To Stay</em></h3>
+      <div class="picks-grid">
+        <div class="pick"><div class="pick-emoji">🏨</div><div class="pick-name">The NoMad Hotel</div><div class="pick-desc">Stunning Beaux-Arts hotel in the Flatiron District. Beautiful interiors, incredible restaurant, perfect location.</div><div class="pick-foot"><span class="pick-price">$$$</span><span class="pick-badge">Most Beautiful</span></div></div>
+        <div class="pick"><div class="pick-emoji">✨</div><div class="pick-name">Moxy NYC Times Square</div><div class="pick-desc">Fun, affordable, and central. Great rooftop bar and a young, social atmosphere. Best value in Manhattan.</div><div class="pick-foot"><span class="pick-price">$$</span><span class="pick-badge">Best Value</span></div></div>
+        <div class="pick"><div class="pick-emoji">🌆</div><div class="pick-name">1 Hotel Brooklyn Bridge</div><div class="pick-desc">Eco-luxury hotel in Brooklyn with an iconic Manhattan skyline view from the rooftop pool. Worth every penny.</div><div class="pick-foot"><span class="pick-price">$$$$</span><span class="pick-badge">View Goals</span></div></div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="foot-logo">Girls Next <span>Stop</span></div>
+    <div class="foot-copy">© 2026 Girls Next Stop · Made with 🩷</div>
+  </footer>
+
+  <div class="quiz-overlay" id="quizOverlay" onclick="handleOverlayClick(event)">
+    <div class="quiz-modal" id="quizModal">
+      <div class="quiz-modal-top">
+        <button class="quiz-close" onclick="closeQuiz()">✕</button>
+        <div class="quiz-icon">✈️</div>
+        <div class="quiz-modal-title">Find Your <em>Dream Trip</em></div>
+        <div class="quiz-modal-sub">Answer 5 quick questions and we'll match you with the perfect destination.</div>
+      </div>
+      <div class="quiz-progress-bar"><div class="quiz-progress-fill" id="quizProgress" style="width:0%"></div></div>
+      <div class="quiz-body" id="quizBody"></div>
+      <div class="quiz-result" id="quizResult">
+        <div class="result-city-img" id="resultImg"></div>
+        <div class="result-match">Your perfect match ✨</div>
+        <div class="result-city-name" id="resultName"></div>
+        <div class="result-desc" id="resultDesc"></div>
+        <div class="result-btns">
+          <button class="result-retake" onclick="retakeQuiz()">Retake Quiz</button>
+          <button class="result-go" id="resultGoBtn">Explore This City →</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="../js/quiz.js"></script>
+</body>
+</html>

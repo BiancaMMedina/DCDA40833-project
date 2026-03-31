@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Las Vegas — Girls Next Stop</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=Cormorant+Garamond:ital,wght@0,300;1,300;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/styles.css" />
+</head>
+<body>
+
+  <nav>
+    <div class="nav-logo" onclick="window.location.href='../index.html'">Girls Next <span>Stop</span></div>
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../index.html#cities">Destinations</a></li>
+      <li><button class="nav-quiz-btn" onclick="openQuiz()">✨ Find My City</button></li>
+    </ul>
+  </nav>
+
+  <div class="city-hero-wrap" style="background-image:url('https://images.unsplash.com/photo-1581351721010-8cf859cb14a4?w=1600&q=80')">
+    <div class="city-hero-grad"></div>
+    <div class="city-hero-txt">
+      <div class="city-hero-country">Nevada, USA</div>
+      <div class="city-hero-name">Las Vegas</div>
+      <div class="city-hero-tagline">What happens here, stays here! </div>
+    </div>
+  </div>
+
+  <div class="city-back-bar">
+    <button class="city-back-btn" onclick="window.location.href='../index.html#cities'">← All Destinations</button>
+  </div>
+
+  <div class="city-content">
+    <div class="city-tabs">
+      <button class="tab-btn active" onclick="switchTab(this,'lv-food')">🍳 Brunch & Food</button>
+      <button class="tab-btn" onclick="switchTab(this,'lv-night')">🍸 Nightlife</button>
+      <button class="tab-btn" onclick="switchTab(this,'lv-shop')">🛍 Shopping</button>
+      <button class="tab-btn" onclick="switchTab(this,'lv-do')">✨ Things To Do</button>
+      <button class="tab-btn" onclick="switchTab(this,'lv-stay')">🏨 Where To Stay</button>
+    </div>
+
+    <div class="tab-panel active" id="lv-food">
+      <h3 class="panel-title">Brunch & <em>Food</em></h3>
+      <div class="picks-grid">
+        <div class="pick"><div class="pick-emoji">🌮</div><div class="pick-name">Tacos El Gordo</div><div class="pick-desc">Located in The Gold Key Shops — a beloved local taco spot serving authentic, flavor-packed street tacos at unbeatable prices.</div><div class="pick-foot"><span class="pick-price">$</span><span class="pick-badge">⭐ 4.3</span></div></div>
+        <div class="pick"><div class="pick-emoji">🥯</div><div class="pick-name">Sadelle's Las Vegas</div><div class="pick-desc">Located inside the Bellagio — a New York-inspired brunch institution known for towering bagel towers, smoked salmon, and indulgent pastries.</div><div class="pick-foot"><span class="pick-price">$$–$$$</span><span class="pick-badge">⭐ 4.2</span></div></div>
+        <div class="pick"><div class="pick-emoji">🍸</div><div class="pick-name">Alexxa's</div><div class="pick-desc">Located inside Paris Las Vegas — a charming French-inspired restaurant with stunning Eiffel Tower views and a menu full of elevated brunch classics.</div><div class="pick-foot"><span class="pick-price">$$–$$$</span><span class="pick-badge">⭐ 4.4</span></div></div>
+        <div class="pick"><div class="pick-emoji">🍝</div><div class="pick-name">Luchini's Italian Restaurant</div><div class="pick-desc">Located inside MGM Grand — a cozy Italian spot serving hearty pastas, wood-fired dishes, and classic comfort food in a warm, welcoming setting.</div><div class="pick-foot"><span class="pick-price">$$–$$$</span><span class="pick-badge">⭐ 3.9</span></div></div>
+        <div class="pick"><div class="pick-emoji">☕</div><div class="pick-name">Lunakin Cafe</div><div class="pick-desc">A cozy neighborhood café with great coffee, fresh pastries, and light bites — the perfect low-key morning spot away from the Strip energy.</div><div class="pick-foot"><span class="pick-price">$–$$</span><span class="pick-badge">⭐ 4.3</span></div></div>
+        <div class="pick"><div class="pick-emoji">🥢</div><div class="pick-name">Wing Lei</div><div class="pick-desc">Located inside Encore Las Vegas — the first Chinese restaurant in the US to earn a Michelin star. Elegant, refined, and extraordinary. Reservations required.</div><div class="pick-foot"><span class="pick-price">$$$</span><span class="pick-badge">Michelin Star</span></div></div>
+      </div>
+    </div>
+
+    <div class="tab-panel" id="lv-night">
+      <h3 class="panel-title"><em>Nightlife</em> & Bars</h3>
+      <div class="picks-grid">
+        <div class="pick"><div class="pick-emoji">🎤</div><div class="pick-name">On the Record</div><div class="pick-desc">Located inside Park MGM — an R&B and Hip-Hop haven with an incredible dancefloor, amazing DJs, and a record store vibe. Open Friday & Saturday nights only.</div><div class="pick-foot"><span class="pick-price">$$$</span><span class="pick-badge">⭐ 4.1</span></div></div>
+        <div class="pick"><div class="pick-emoji">💍</div><div class="pick-name">Pinky Ring</div><div class="pick-desc">Located inside the Bellagio — a sleek, intimate lounge with plush seating, curated cocktails, and a sophisticated late-night atmosphere. Open daily 8PM–2AM.</div><div class="pick-foot"><span class="pick-price">$$$</span><span class="pick-badge">⭐ 4.3</span></div></div>
+        <div class="pick"><div class="pick-emoji">💃</div><div class="pick-name">Omnia Nightclub</div><div class="pick-desc">One of Vegas's most iconic clubs with world-class DJs and a stunning chandelier dancefloor. Best nights are Tuesdays and Saturdays — go early, it fills up fast. Closed Mondays & Wednesdays.</div><div class="pick-foot"><span class="pick-price">$$–$$$</span><span class="pick-badge">⭐ 3.3</span></div></div>
+        <div class="pick"><div class="pick-emoji">🌟</div><div class="pick-name">XS Nightclub</div><div class="pick-desc">Located inside Wynn Las Vegas — a legendary gold-accented superclub with top-tier DJs, an outdoor pool area, and an electric atmosphere. Closed Mon, Tue & Thu.</div><div class="pick-foot"><span class="pick-price">$$–$$$</span><span class="pick-badge">⭐ 3.3</span></div></div>
+        <div class="pick"><div class="pick-emoji">🏖</div><div class="pick-name">Drai's Beachclub & Nightclub</div><div class="pick-desc">A one-of-a-kind Vegas experience combining a rooftop beachclub by day and a high-energy nightclub after dark with celebrity performances and pool vibes.</div><div class="pick-foot"><span class="pick-price">$$–$$$</span><span class="pick-badge">⭐ 4.1</span></div></div>
+        <div class="pick"><div class="pick-emoji">🎶</div><div class="pick-name">Hyde</div><div class="pick-desc">Located at T-Mobile Arena — an upscale lounge and nightlife spot with stunning views, great cocktails, and a chic crowd. One of the highest-rated bars in Vegas.</div><div class="pick-foot"><span class="pick-price">$$$</span><span class="pick-badge">⭐ 4.8</span></div></div>
+      </div>
+    </div>
+
+    <div class="tab-panel" id="lv-shop">
+      <h3 class="panel-title"><em>Shopping</em></h3>
+      <div class="picks-grid">
+        <div class="pick"><div class="pick-emoji">🏛</div><div class="pick-name">The Forum Shops at Caesars Palace</div><div class="pick-desc">An iconic Las Vegas shopping destination with over 160 luxury and designer stores set beneath a stunning painted sky ceiling — shopping as entertainment.</div><div class="pick-foot"><span class="pick-price">$–$$$</span><span class="pick-badge">⭐ 4.6</span></div></div>
+        <div class="pick"><div class="pick-emoji">🪄</div><div class="pick-name">Antique Alley Mall</div><div class="pick-desc">Huge indoor vintage market with tons of vendors selling everything from clothing to old Vegas memorabilia.</div><div class="pick-foot"><span class="pick-price">$$–$$$</span><span class="pick-badge">⭐ 4.4</span></div></div>
+        <div class="pick"><div class="pick-emoji">💎</div><div class="pick-name">The Shops at Crystals</div><div class="pick-desc">Ultra-luxury mall with brands like Gucci, Prada, and Louis Vuitton in a sleek, modern space.</div><div class="pick-foot"><span class="pick-price">$$$$</span><span class="pick-badge">⭐ 4.4</span></div></div>
+        <div class="pick"><div class="pick-emoji">♻️</div><div class="pick-name">Reclaim Las Vegas</div><div class="pick-desc">A sustainability-focused vintage and resale shop curating elevated secondhand finds — unique, affordable, and surprisingly stylish for a Vegas score.</div><div class="pick-foot"><span class="pick-price">$$–$$$</span><span class="pick-badge">⭐ 5.0</span></div></div>
+        <div class="pick"><div class="pick-emoji">💜</div><div class="pick-name">The Purple Chandelier</div><div class="pick-desc">A luxury consignment boutique with carefully curated designer pieces, statement accessories, and high-end finds at a fraction of retail prices.</div><div class="pick-foot"><span class="pick-price">$–$$$</span><span class="pick-badge">⭐ 4.4</span></div></div>
+        <div class="pick"><div class="pick-emoji">🐺</div><div class="pick-name">The Good Wolf Lifestyle Co.</div><div class="pick-desc">A curated lifestyle boutique blending fashion, wellness, and home goods — a refreshing, feel-good shopping experience away from the Strip hustle.</div><div class="pick-foot"><span class="pick-price">$$–$$$</span><span class="pick-badge">⭐ 4.9</span></div></div>
+      </div>
+    </div>
+
+    <div class="tab-panel" id="lv-do">
+      <h3 class="panel-title">Things <em>To Do</em></h3>
+      <div class="picks-grid">
+        <div class="pick"><div class="pick-emoji">🌐</div><div class="pick-name">Sphere Experience</div><div class="pick-desc">Massive immersive shows with insane visuals and sound — this is the coolest thing in Vegas right now and looks unreal inside.</div><div class="pick-foot"><span class="pick-price">$$$–$$$$</span><span class="pick-badge">⭐ 4.5</span></div></div>
+        <div class="pick"><div class="pick-emoji">🎤</div><div class="pick-name">Residency Show</div><div class="pick-desc">Vegas residencies are next-level concerts — intimate, high production, and way more exclusive than a normal tour. Check who's playing your weekend.</div><div class="pick-foot"><span class="pick-price">$$$$</span><span class="pick-badge">Bucket List</span></div></div>
+        <div class="pick"><div class="pick-emoji">🎰</div><div class="pick-name">Bellagio Casino Gambling Night</div><div class="pick-desc">Classic Vegas night in a gorgeous casino! Dress up, grab drinks, and try slots or blackjack for the full experience.</div><div class="pick-foot"><span class="pick-price">$$–$$$$</span><span class="pick-badge">⭐ 4.5</span></div></div>
+        <div class="pick"><div class="pick-emoji">🍸</div><div class="pick-name">Rooftop Drinks at Skyfall Lounge</div><div class="pick-desc">Floor-to-ceiling Strip views, perfect for getting ready pics and a more upscale pregame moment.</div><div class="pick-foot"><span class="pick-price">$$$</span><span class="pick-badge">⭐ 4.4</span></div></div>
+        <div class="pick"><div class="pick-emoji">💆‍♀️</div><div class="pick-name">Waldorf Astoria Spa</div><div class="pick-desc">One of the most high-end spas in Vegas with steam rooms, vitality pools, and full-body rituals designed to relax everything.</div><div class="pick-foot"><span class="pick-price">$$$$</span><span class="pick-badge">⭐ 4.6</span></div></div>
+        <div class="pick"><div class="pick-emoji">🏜</div><div class="pick-name">Red Rock Canyon</div><div class="pick-desc">Gorgeous red rock mountains, scenic drives, and easy-to-moderate hikes. About an 18 minute drive from Las Vegas — a perfect half-day escape.</div><div class="pick-foot"><span class="pick-price">$</span><span class="pick-badge">⭐ 4.7</span></div></div>
+      </div>
+    </div>
+
+    <div class="tab-panel" id="lv-stay">
+      <h3 class="panel-title">Where <em>To Stay</em></h3>
+      <div class="picks-grid">
+        <div class="pick"><div class="pick-emoji">🛶</div><div class="pick-name">The Venetian Resort Las Vegas</div><div class="pick-desc">Luxury Italian-inspired resort with gondola rides, huge suites, and a lively casino. Very classic, upscale Vegas energy.</div><div class="pick-foot"><span class="pick-price">$$$–$$$$</span><span class="pick-badge">⭐ 4.6</span></div></div>
+        <div class="pick"><div class="pick-emoji">🏨</div><div class="pick-name">SAHARA Las Vegas</div><div class="pick-desc">More affordable, modern hotel at the north end of the Strip with a smaller casino and boutique-style feel.</div><div class="pick-foot"><span class="pick-price">$$</span><span class="pick-badge">⭐ 4.1</span></div></div>
+        <div class="pick"><div class="pick-emoji">🖥</div><div class="pick-name">ARIA Resort & Casino</div><div class="pick-desc">Sleek, modern resort with high-tech rooms, a large casino, and a central Strip location — feels polished and upscale.</div><div class="pick-foot"><span class="pick-price">$$$–$$$$</span><span class="pick-badge">⭐ 4.5</span></div></div>
+        <div class="pick"><div class="pick-emoji">✨</div><div class="pick-name">Wynn Las Vegas</div><div class="pick-desc">One of the most luxurious hotels in Vegas with elegant rooms, high-end shopping, and top-tier nightlife.</div><div class="pick-foot"><span class="pick-price">$$$$</span><span class="pick-badge">⭐ 4.7</span></div></div>
+        <div class="pick"><div class="pick-emoji">🎡</div><div class="pick-name">The LINQ Hotel + Experience</div><div class="pick-desc">Modern, budget-friendly hotel right in the center of the Strip with a younger party vibe and easy access to bars, restaurants, and the High Roller.</div><div class="pick-foot"><span class="pick-price">$$</span><span class="pick-badge">⭐ 4.1</span></div></div>
+        <div class="pick"><div class="pick-emoji">🎬</div><div class="pick-name">Planet Hollywood Resort & Casino</div><div class="pick-desc">Fun, lively hotel with spacious rooms and a super central location — great balance of affordability and energy without feeling cheap.</div><div class="pick-foot"><span class="pick-price">$$</span><span class="pick-badge">⭐ 4.3</span></div></div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="foot-logo">Girls Next <span>Stop</span></div>
+    <div class="foot-copy">© 2026 Girls Next Stop · Made with 🩷</div>
+  </footer>
+
+  <div class="quiz-overlay" id="quizOverlay" onclick="handleOverlayClick(event)">
+    <div class="quiz-modal" id="quizModal">
+      <div class="quiz-modal-top">
+        <button class="quiz-close" onclick="closeQuiz()">✕</button>
+        <div class="quiz-icon">✈️</div>
+        <div class="quiz-modal-title">Find Your <em>Dream Trip</em></div>
+        <div class="quiz-modal-sub">Answer 5 quick questions and we'll match you with the perfect destination.</div>
+      </div>
+      <div class="quiz-progress-bar"><div class="quiz-progress-fill" id="quizProgress" style="width:0%"></div></div>
+      <div class="quiz-body" id="quizBody"></div>
+      <div class="quiz-result" id="quizResult">
+        <div class="result-city-img" id="resultImg"></div>
+        <div class="result-match">Your perfect match ✨</div>
+        <div class="result-city-name" id="resultName"></div>
+        <div class="result-desc" id="resultDesc"></div>
+        <div class="result-btns">
+          <button class="result-retake" onclick="retakeQuiz()">Retake Quiz</button>
+          <button class="result-go" id="resultGoBtn">Explore This City →</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="../js/quiz.js"></script>
+</body>
+</html>
