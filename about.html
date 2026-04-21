@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About — Girls Next Stop</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=Cormorant+Garamond:ital,wght@0,300;1,300;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+
+    /* ── HERO ── */
+    .about-hero {
+      background: var(--dark);
+      padding: 140px 52px 100px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .about-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 65% 55% at 15% 50%, rgba(242,167,184,0.13) 0%, transparent 60%),
+        radial-gradient(ellipse 55% 45% at 85% 50%, rgba(224,96,128,0.11) 0%, transparent 60%);
+      pointer-events: none;
+    }
+    .about-hero-tag {
+      font-size: 0.7rem;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: var(--pink);
+      font-weight: 500;
+      display: block;
+      margin-bottom: 16px;
+      opacity: 0;
+      animation: fadeUp 0.8s ease forwards 0.2s;
+    }
+    .about-hero-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(3rem, 8vw, 7rem);
+      font-weight: 900;
+      color: var(--white);
+      line-height: 0.95;
+      margin-bottom: 20px;
+      opacity: 0;
+      animation: fadeUp 0.8s ease forwards 0.4s;
+    }
+    .about-hero-title em {
+      font-style: italic;
+      color: var(--pink);
+    }
+    .about-hero-sub {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.25rem;
+      font-style: italic;
+      color: rgba(255,255,255,0.55);
+      max-width: 500px;
+      margin: 0 auto;
+      line-height: 1.6;
+      opacity: 0;
+      animation: fadeUp 0.8s ease forwards 0.6s;
+    }
+
+    /* ── ILLUSTRATION STRIP ── */
+    .illustration-strip {
+      background: var(--pink-light);
+      padding: 48px 52px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 32px;
+      flex-wrap: wrap;
+      border-bottom: 1px solid var(--border);
+    }
+    .illus-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+    .illus-icon {
+      font-size: 2.8rem;
+      background: var(--white);
+      width: 72px;
+      height: 72px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 20px rgba(224,96,128,0.12);
+      border: 1px solid var(--border);
+    }
+    .illus-label {
+      font-size: 0.68rem;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-mid);
+    }
+
+    /* ── MAIN CONTENT ── */
+    .about-content {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 80px 52px 120px;
+    }
+
+    /* ── INTRO CARD ── */
+    .about-intro-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 28px;
+      padding: 48px;
+      margin-bottom: 60px;
+      position: relative;
+      overflow: hidden;
+    }
+    .about-intro-card::before {
+      content: '✈️';
+      position: absolute;
+      top: -10px;
+      right: 32px;
+      font-size: 6rem;
+      opacity: 0.06;
+      transform: rotate(15deg);
+    }
+    .about-intro-greeting {
+      font-size: 0.72rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--pink-deep);
+      font-weight: 500;
+      margin-bottom: 12px;
+      display: block;
+    }
+    .about-intro-name {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      font-weight: 900;
+      color: var(--dark);
+      line-height: 1.05;
+      margin-bottom: 24px;
+    }
+    .about-intro-name em {
+      font-style: italic;
+      color: var(--pink-deep);
+    }
+    .about-intro-text {
+      font-size: 0.95rem;
+      line-height: 1.85;
+      color: var(--text-mid);
+      margin-bottom: 18px;
+    }
+    .about-intro-text strong {
+      color: var(--dark);
+      font-weight: 500;
+    }
+    .about-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 28px;
+    }
+    .about-tag {
+      background: var(--pink-light);
+      color: var(--pink-deep);
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 7px 16px;
+      border-radius: 100px;
+      border: 1px solid var(--border);
+    }
+
+    /* ── SECTION TITLE ── */
+    .about-section-label {
+      font-size: 0.68rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--pink-deep);
+      font-weight: 500;
+      display: block;
+      margin-bottom: 10px;
+    }
+    .about-section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+      font-weight: 700;
+      color: var(--dark);
+      margin-bottom: 28px;
+      line-height: 1.1;
+    }
+    .about-section-title em {
+      font-style: italic;
+      color: var(--pink-deep);
+    }
+
+    /* ── MISSION SECTION ── */
+    .mission-section {
+      margin-bottom: 72px;
+    }
+    .mission-text {
+      font-size: 0.95rem;
+      line-height: 1.85;
+      color: var(--text-mid);
+      margin-bottom: 20px;
+    }
+    .mission-pull {
+      border-left: 3px solid var(--pink-deep);
+      margin: 36px 0;
+      padding: 20px 28px;
+      background: var(--pink-light);
+      border-radius: 0 14px 14px 0;
+    }
+    .mission-pull p {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.2rem;
+      font-style: italic;
+      color: var(--dark);
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    /* ── TRAVEL STYLE ── */
+    .travel-style-section {
+      margin-bottom: 72px;
+    }
+    .style-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 16px;
+      margin-top: 8px;
+    }
+    .style-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 24px 20px;
+      text-align: center;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .style-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 36px rgba(224,96,128,0.12);
+    }
+    .style-card-emoji { font-size: 2rem; margin-bottom: 10px; }
+    .style-card-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--dark);
+      margin-bottom: 6px;
+    }
+    .style-card-desc {
+      font-size: 0.78rem;
+      line-height: 1.55;
+      color: var(--text-light);
+    }
+
+    /* ── CITIES SECTION ── */
+    .cities-section {
+      margin-bottom: 72px;
+    }
+    .fave-cities {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 8px;
+    }
+    .fave-city {
+      background: var(--white);
+      border: 1.5px solid var(--border);
+      border-radius: 100px;
+      padding: 10px 20px;
+      font-size: 0.82rem;
+      font-weight: 500;
+      color: var(--dark);
+      text-decoration: none;
+      transition: all 0.2s;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .fave-city:hover {
+      background: var(--dark);
+      color: var(--white);
+      border-color: var(--dark);
+      transform: translateY(-2px);
+    }
+
+    /* ── MISSION CARDS ── */
+    .mission-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 18px;
+      margin: 32px 0;
+    }
+    .mission-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 26px 22px;
+      transition: box-shadow 0.2s;
+    }
+    .mission-card:hover {
+      box-shadow: 0 10px 32px rgba(224,96,128,0.1);
+    }
+    .mission-card-emoji { font-size: 1.8rem; margin-bottom: 12px; }
+    .mission-card-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--dark);
+      margin-bottom: 8px;
+    }
+    .mission-card-desc {
+      font-size: 0.82rem;
+      line-height: 1.65;
+      color: var(--text-mid);
+    }
+
+    /* ── CTA STRIP ── */
+    .about-cta {
+      background: var(--dark);
+      border-radius: 24px;
+      padding: 52px 48px;
+      text-align: center;
+      margin-top: 16px;
+    }
+    .about-cta-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 12px;
+    }
+    .about-cta-title em { font-style: italic; color: var(--pink); }
+    .about-cta-sub {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.1rem;
+      font-style: italic;
+      color: rgba(255,255,255,0.55);
+      margin-bottom: 32px;
+    }
+    .about-cta-btns {
+      display: flex;
+      gap: 14px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 680px) {
+      .about-hero { padding: 120px 22px 80px; }
+      .illustration-strip { padding: 36px 22px; gap: 20px; }
+      .about-content { padding: 52px 22px 80px; }
+      .about-intro-card { padding: 32px 24px; }
+      .about-cta { padding: 40px 24px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ── NAV ── -->
+  <nav>
+    <div class="nav-logo" onclick="window.location.href='index.html'">Girls Next <span>Stop</span></div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="index.html#cities">Destinations</a></li>
+      <li><a href="about.html" style="color:var(--pink-deep);">About</a></li>
+      <li><a href="analysis.html">Analysis</a></li>
+      <li><button class="nav-quiz-btn" onclick="openQuiz()">✨ Find My City</button></li>
+    </ul>
+  </nav>
+
+  <!-- ── HERO ── -->
+  <div class="about-hero">
+    <span class="about-hero-tag">The girl behind the guide</span>
+    <h1 class="about-hero-title">Hey, I'm <em>glad</em><br>you're here.</h1>
+    <p class="about-hero-sub">Welcome to Girls Next Stop — a travel guide built by a girl who loves good food, great company, and an excuse to pack a bag.</p>
+  </div>
+
+  <!-- ── ILLUSTRATION STRIP ── -->
+  <div class="illustration-strip">
+    <div class="illus-item">
+      <div class="illus-icon">✈️</div>
+      <div class="illus-label">Always Traveling</div>
+    </div>
+    <div class="illus-item">
+      <div class="illus-icon">🥂</div>
+      <div class="illus-label">Brunch Obsessed</div>
+    </div>
+    <div class="illus-item">
+      <div class="illus-icon">🛍</div>
+      <div class="illus-label">Serial Shopper</div>
+    </div>
+    <div class="illus-item">
+      <div class="illus-icon">📍</div>
+      <div class="illus-label">DFW, Texas</div>
+    </div>
+    <div class="illus-item">
+      <div class="illus-icon">🩷</div>
+      <div class="illus-label">Girls Trip Advocate</div>
+    </div>
+    <div class="illus-item">
+      <div class="illus-icon">📱</div>
+      <div class="illus-label">TikTok Researcher</div>
+    </div>
+  </div>
+
+  <!-- ── MAIN CONTENT ── -->
+  <div class="about-content">
+
+    <!-- INTRO CARD -->
+    <div class="about-intro-card">
+      <span class="about-intro-greeting">Nice to meet you 🩷</span>
+      <h2 class="about-intro-name">A DFW girl with a<br><em>serious case of wanderlust.</em></h2>
+      <p class="about-intro-text">
+        Hi! I'm a student at TCU studying Digital Culture & Data Analytics, and Girls Next Stop is my semester project — but honestly, it became so much more than that. I'm from the Dallas–Fort Worth area, and like a lot of girls I know, I'm always in a group chat trying to plan the next trip with my friends and running into the same problem: where do we even start?
+      </p>
+      <p class="about-intro-text">
+        That's exactly why I built this. I wanted one place that had everything — the best brunch spots, the hidden gem bars, the boutiques worth walking into, the hotels that actually look as good as the photos, and the activities that make a trip feel like more than just a vacation. <strong>No sponsored content, no generic listicles — just real recommendations curated with care.</strong>
+      </p>
+      <p class="about-intro-text">
+        Every single rating, price, and description on this site was personally researched by me. I spent hours on TikTok, Instagram, Google, and travel blogs so you don't have to. You're welcome. 😄
+      </p>
+      <div class="about-tags">
+        <span class="about-tag">TCU Student</span>
+        <span class="about-tag">DCDA Minor</span>
+        <span class="about-tag">DFW, Texas</span>
+        <span class="about-tag">Travel Enthusiast</span>
+        <span class="about-tag">Brunch Connoisseur</span>
+        <span class="about-tag">Girls Trip Planner</span>
+      </div>
+    </div>
+
+    <!-- MISSION -->
+    <div class="mission-section">
+      <span class="about-section-label">Why I built this</span>
+      <h2 class="about-section-title">The <em>Mission</em></h2>
+
+      <p class="mission-text">
+        Planning a girls' trip should feel exciting — not exhausting. But between juggling everyone's budgets, preferences, and Pinterest boards, it can quickly turn into a second job. I wanted to fix that.
+      </p>
+
+      <div class="mission-pull">
+        <p>"Girls Next Stop exists to make group travel planning feel less like a chore and more like the pre-trip excitement it's supposed to be."</p>
+      </div>
+
+      <div class="mission-cards">
+        <div class="mission-card">
+          <div class="mission-card-emoji">🎯</div>
+          <div class="mission-card-title">Curated, Not Generic</div>
+          <div class="mission-card-desc">Every recommendation was hand-picked based on real reviews, local knowledge, and social proof — not just whatever ranked first on Google.</div>
+        </div>
+        <div class="mission-card">
+          <div class="mission-card-emoji">💸</div>
+          <div class="mission-card-title">Every Budget Welcome</div>
+          <div class="mission-card-desc">From free hikes to five-star resorts, there's something here for the girl on a budget and the girl ready to fully splurge.</div>
+        </div>
+        <div class="mission-card">
+          <div class="mission-card-emoji">🌈</div>
+          <div class="mission-card-title">For Every Kind of Girl</div>
+          <div class="mission-card-desc">Not every girls' trip looks the same — some want nightlife, some want spa days, some want to hike. This site has it all covered.</div>
+        </div>
+        <div class="mission-card">
+          <div class="mission-card-emoji">✨</div>
+          <div class="mission-card-title">Actually Fun to Use</div>
+          <div class="mission-card-desc">A travel guide should feel as good as the trip itself. The site is designed to be beautiful, easy to browse, and genuinely enjoyable.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TRAVEL STYLE -->
+    <div class="travel-style-section">
+      <span class="about-section-label">A little about me</span>
+      <h2 class="about-section-title">My Travel <em>Personality</em></h2>
+
+      <p class="mission-text">
+        If you handed me a weekend and a carry-on, I'd be researching restaurants before the flight even booked. I'm the friend who makes the Google Doc, sends the itinerary, and still somehow forgets to pack sunscreen. Here's what you need to know about my travel style:
+      </p>
+
+      <div class="style-grid">
+        <div class="style-card">
+          <div class="style-card-emoji">🍳</div>
+          <div class="style-card-title">Brunch First</div>
+          <div class="style-card-desc">The first thing I research in any city is where to eat brunch. Non-negotiable.</div>
+        </div>
+        <div class="style-card">
+          <div class="style-card-emoji">🛍</div>
+          <div class="style-card-title">Boutique Hunter</div>
+          <div class="style-card-desc">Give me a walkable shopping street over a mall any day. Bonus points for vintage.</div>
+        </div>
+        <div class="style-card">
+          <div class="style-card-emoji">📸</div>
+          <div class="style-card-title">Content Creator</div>
+          <div class="style-card-desc">I will find the most aesthetic wall in every city. It's a gift and a curse.</div>
+        </div>
+        <div class="style-card">
+          <div class="style-card-emoji">🌙</div>
+          <div class="style-card-title">Night Owl</div>
+          <div class="style-card-desc">From rooftop cocktails to dancing until 2am, I'm always down for a good night out.</div>
+        </div>
+        <div class="style-card">
+          <div class="style-card-emoji">💆‍♀️</div>
+          <div class="style-card-title">Spa Appreciator</div>
+          <div class="style-card-desc">A trip isn't complete without at least one spa moment. Balance is everything.</div>
+        </div>
+        <div class="style-card">
+          <div class="style-card-emoji">🗺</div>
+          <div class="style-card-title">Over-Planner</div>
+          <div class="style-card-desc">I have a full itinerary, a backup itinerary, and snacks. You're welcome.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FAVE CITIES -->
+    <div class="cities-section">
+      <span class="about-section-label">On the site</span>
+      <h2 class="about-section-title">8 Cities, <em>Endless Possibilities</em></h2>
+      <p class="mission-text">
+        Each city was chosen because it offers something special for a girls' trip — whether that's world-class nightlife, stunning nature, incredible food scenes, or a little bit of everything. Click any city to start exploring:
+      </p>
+      <div class="fave-cities">
+        <a class="fave-city" href="cities/miami.html">🌴 Miami</a>
+        <a class="fave-city" href="cities/nashville.html">🎸 Nashville</a>
+        <a class="fave-city" href="cities/scottsdale.html">🌵 Scottsdale</a>
+        <a class="fave-city" href="cities/charleston.html">🌸 Charleston</a>
+        <a class="fave-city" href="cities/lasvegas.html">🎰 Las Vegas</a>
+        <a class="fave-city" href="cities/nyc.html">🗽 New York City</a>
+        <a class="fave-city" href="cities/aspen.html">⛷️ Aspen</a>
+        <a class="fave-city" href="cities/honolulu.html">🌺 Honolulu</a>
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="about-cta">
+      <h2 class="about-cta-title">Not sure where to go? <em>Let's figure it out.</em></h2>
+      <p class="about-cta-sub">Take the 5-question quiz and we'll match you with your perfect girls' trip destination.</p>
+      <div class="about-cta-btns">
+        <button class="btn-primary" onclick="openQuiz()">✨ Take the Quiz</button>
+        <a href="index.html#cities" class="btn-outline" style="color:var(--white);border-color:rgba(255,255,255,0.3);">Browse All Cities</a>
+      </div>
+    </div>
+
+  </div><!-- /about-content -->
+
+  <!-- ── FOOTER ── -->
+  <footer>
+    <div class="foot-logo">Girls Next <span>Stop</span></div>
+    <div class="foot-copy">© 2025 Girls Next Stop · Made with 🩷</div>
+  </footer>
+
+  <!-- ── QUIZ MODAL ── -->
+  <div class="quiz-overlay" id="quizOverlay" onclick="handleOverlayClick(event)">
+    <div class="quiz-modal" id="quizModal">
+      <div class="quiz-modal-top">
+        <button class="quiz-close" onclick="closeQuiz()">✕</button>
+        <div class="quiz-icon">✈️</div>
+        <div class="quiz-modal-title">Find Your <em>Dream Trip</em></div>
+        <div class="quiz-modal-sub">Answer 5 quick questions and we'll match you with the perfect destination.</div>
+      </div>
+      <div class="quiz-progress-bar"><div class="quiz-progress-fill" id="quizProgress" style="width:0%"></div></div>
+      <div class="quiz-body" id="quizBody"></div>
+      <div class="quiz-result" id="quizResult">
+        <div class="result-city-img" id="resultImg"></div>
+        <div class="result-match">Your perfect match ✨</div>
+        <div class="result-city-name" id="resultName"></div>
+        <div class="result-desc" id="resultDesc"></div>
+        <div class="result-btns">
+          <button class="result-retake" onclick="retakeQuiz()">Retake Quiz</button>
+          <button class="result-go" id="resultGoBtn">Explore This City →</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/quiz.js"></script>
+</body>
+</html>
